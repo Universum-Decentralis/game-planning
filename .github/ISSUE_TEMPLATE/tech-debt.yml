@@ -1,0 +1,32 @@
+name: Tech Debt
+description: Refactoring, cleanup, or improvements
+labels: ["type:tech-debt"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the project?
+      options:
+        - Deployments (Smart Contracts)
+        - Backend (Web3 API)
+        - Game (Unity)
+        - Frontend (Web)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What needs improvement?
+      description: Describe what should be refactored or cleaned up
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this important?
+      description: What problems does this cause if not addressed?
+    validations:
+      required: false
