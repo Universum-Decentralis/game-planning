@@ -1,0 +1,9 @@
+{
+  "repo": "Universum-Decentralis/game-planning",
+  "areas": [
+    {"name": "deployments", "label": "area:deployments", "description": "Smart contracts"},
+    {"name": "backend", "label": "area:backend", "description": "Web3 backend"},
+    {"name": "game", "label": "area:game", "description": "Unity game"},
+    {"name": "frontend", "label": "area:frontend", "description": "Web frontend"}
+  ]
+}
