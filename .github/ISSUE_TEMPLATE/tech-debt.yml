@@ -1,32 +1,38 @@
-name: Tech Debt
-description: Refactoring, cleanup, or improvements
-labels: ["type:tech-debt"]
+name: Tech Debt / Improvement
+description: Code quality, refactoring, or developer experience
+labels: ["type:tech-debt", "needs:triage"]
 body:
-  - type: dropdown
-    id: area
-    attributes:
-      label: Area
-      description: Which part of the project?
-      options:
-        - Deployments (Smart Contracts)
-        - Backend (Web3 API)
-        - Game (Unity)
-        - Frontend (Web)
-    validations:
-      required: true
-
   - type: textarea
     id: description
     attributes:
       label: What needs improvement?
-      description: Describe what should be refactored or cleaned up
+      description: What technical issue should we address?
     validations:
       required: true
+
+  - type: checkboxes
+    id: area
+    attributes:
+      label: Area
+      description: Which parts of the codebase?
+      options:
+        - label: Deployments (Smart Contracts)
+        - label: Backend (Web3 API)
+        - label: Game (Unity)
+        - label: Frontend (Web)
 
   - type: textarea
     id: why
     attributes:
       label: Why is this important?
-      description: What problems does this cause if not addressed?
+      description: What problems does this cause? What would improve?
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution (optional)
+      description: Any ideas on how to fix it?
     validations:
       required: false

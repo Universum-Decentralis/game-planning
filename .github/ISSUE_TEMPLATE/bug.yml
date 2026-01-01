@@ -1,57 +1,60 @@
 name: Bug Report
-description: Report a bug
-labels: ["type:bug"]
+description: Something isn't working
+labels: ["type:bug", "needs:triage"]
 body:
-  - type: dropdown
-    id: area
-    attributes:
-      label: Area
-      description: Which part of the project is affected?
-      options:
-        - Deployments (Smart Contracts)
-        - Backend (Web3 API)
-        - Game (Unity)
-        - Frontend (Web)
-    validations:
-      required: true
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Severity
-      description: How bad is it?
-      options:
-        - High - Blocking / Critical
-        - Medium - Important but workaround exists
-        - Low - Minor issue
-    validations:
-      required: true
-
   - type: textarea
     id: description
     attributes:
       label: What happened?
-      description: Describe the bug
-      placeholder: What went wrong?
+      description: Describe what went wrong
+      placeholder: When I tried to... it showed...
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
-      description: What should have happened?
+      label: What should have happened?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: area
+    attributes:
+      label: Area (optional - developers will assign if unsure)
+      description: Which parts seem affected?
+      options:
+        - label: Deployments (Smart Contracts)
+        - label: Backend (Web3 API)
+        - label: Game (Unity)
+        - label: Frontend (Web)
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How bad is it?
+      options:
+        - Blocker - Can't use the product
+        - Major - Significant problem
+        - Minor - Small issue or cosmetic
     validations:
       required: false
 
   - type: textarea
     id: reproduce
     attributes:
-      label: Steps to reproduce
-      description: How can we reproduce this?
+      label: Steps to reproduce (if known)
       placeholder: |
         1. Go to...
         2. Click on...
         3. See error
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Screenshots or logs
+      description: Anything that helps understand the issue
     validations:
       required: false

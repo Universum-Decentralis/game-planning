@@ -1,48 +1,53 @@
 name: Feature Request
-description: Propose a new feature
-labels: ["type:feature"]
+description: Propose a new feature or improvement
+labels: ["type:feature", "needs:triage"]
 body:
-  - type: dropdown
-    id: area
+  - type: textarea
+    id: description
     attributes:
-      label: Area
-      description: Which part of the project does this affect?
-      options:
-        - Deployments (Smart Contracts)
-        - Backend (Web3 API)
-        - Game (Unity)
-        - Frontend (Web)
+      label: What do you want?
+      description: Describe the feature from a user perspective
+      placeholder: As a player, I want to... so that...
     validations:
       required: true
+
+  - type: checkboxes
+    id: area
+    attributes:
+      label: Area (optional - developers will assign if unsure)
+      description: Which parts of the project might this involve?
+      options:
+        - label: Deployments (Smart Contracts)
+        - label: Backend (Web3 API)
+        - label: Game (Unity)
+        - label: Frontend (Web)
 
   - type: dropdown
     id: priority
     attributes:
       label: Priority
-      description: How urgent is this?
       options:
-        - High - Do first
-        - Medium - Do soon
-        - Low - Do eventually
+        - High - Need this soon
+        - Medium - Important but not urgent
+        - Low - Nice to have
     validations:
-      required: true
+      required: false
 
   - type: textarea
-    id: description
+    id: context
     attributes:
-      label: Description
-      description: What do you want to build?
-      placeholder: Describe the feature...
+      label: Additional context
+      description: Any mockups, examples, or references?
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: acceptance
     attributes:
-      label: Acceptance Criteria
-      description: How do we know it's done?
+      label: Acceptance Criteria (optional)
+      description: How do we know it's done? Developers can fill this in later.
       placeholder: |
-        - [ ] Criteria 1
-        - [ ] Criteria 2
+        - [ ] ...
+        - [ ] ...
     validations:
       required: false
