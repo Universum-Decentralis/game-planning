@@ -18,17 +18,6 @@ body:
     validations:
       required: false
 
-  - type: checkboxes
-    id: area
-    attributes:
-      label: Area (optional - developers will assign if unsure)
-      description: Which parts seem affected?
-      options:
-        - label: Deployments (Smart Contracts)
-        - label: Backend (Web3 API)
-        - label: Game (Unity)
-        - label: Frontend (Web)
-
   - type: dropdown
     id: severity
     attributes:
@@ -36,25 +25,13 @@ body:
       options:
         - Blocker - Can't use the product
         - Major - Significant problem
-        - Minor - Small issue or cosmetic
-    validations:
-      required: false
-
-  - type: textarea
-    id: reproduce
-    attributes:
-      label: Steps to reproduce (if known)
-      placeholder: |
-        1. Go to...
-        2. Click on...
-        3. See error
+        - Minor - Small issue
     validations:
       required: false
 
   - type: textarea
     id: context
     attributes:
-      label: Screenshots or logs
-      description: Anything that helps understand the issue
+      label: Screenshots, logs, or steps to reproduce
     validations:
       required: false

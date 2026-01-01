@@ -11,17 +11,6 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
-    id: area
-    attributes:
-      label: Area (optional - developers will assign if unsure)
-      description: Which parts of the project might this involve?
-      options:
-        - label: Deployments (Smart Contracts)
-        - label: Backend (Web3 API)
-        - label: Game (Unity)
-        - label: Frontend (Web)
-
   - type: dropdown
     id: priority
     attributes:
@@ -38,16 +27,5 @@ body:
     attributes:
       label: Additional context
       description: Any mockups, examples, or references?
-    validations:
-      required: false
-
-  - type: textarea
-    id: acceptance
-    attributes:
-      label: Acceptance Criteria (optional)
-      description: How do we know it's done? Developers can fill this in later.
-      placeholder: |
-        - [ ] ...
-        - [ ] ...
     validations:
       required: false
